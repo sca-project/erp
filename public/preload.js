@@ -38,3 +38,6 @@ contextBridge.exposeInMainWorld("api", {
     console.log('====================================');
   })
 
+  ipcRenderer.on("update-available", (e, arg) => console.log(arg));
+  ipcRenderer.on("downloadUpdate", (e, arg) => console.log(arg));
+  ipcRenderer.on("update-downloaded", (e, arg) => console.log(arg));
