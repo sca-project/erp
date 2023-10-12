@@ -1,0 +1,120 @@
+export const mission = {
+  code: "",
+  nature: "",
+  debut: "",
+  fin: "",
+  status: "",
+  equipe:[]
+};
+
+export const activite ={
+libelle:"",
+date:"",
+duree:""
+}
+
+export const natures = [
+  {
+    code: "10",
+    libelle: "TENUE DE LA COMPTABILITE",
+  },
+  {
+    code: "15",
+    libelle: "EXPERTISE DOSSIERS EXTERNES",
+  },
+  {
+    code: "20",
+    libelle: "REPRESENTATION    ",
+  },
+  {
+    code: "30",
+    libelle: "JURIDIQUE FISCAL ET SOCIAL",
+  },
+  {
+    code: "40",
+    libelle: "CAC/AUDIT",
+  },
+  {
+    code: "50",
+    libelle: "AUDIT DES PROJETS",
+  },
+  {
+    code: "60",
+    libelle: "SYSTÈME D'INFORMATION",
+  },
+  {
+    code: "90",
+    libelle: "NON FACTURABLE",
+  },
+];
+export const taches = [
+    {code:'10',libelle:'TENUE DE LA COMPTABILITE'},
+
+  { code: "100", libelle: "IMPUTATION" },
+  { code: "101", libelle: "SAISIE" },
+  { code: "102", libelle: "POINTAGE ET CONTRÔLE DE LA SAISIE" },
+  { code: "103", libelle: "ANALYSE DES COMPTES" },
+  { code: "104", libelle: "CONTRÔLE DES DECLARATIONS" },
+  { code: "106", libelle: "DECLARATIONS (BIC,TVA,DAR,PRORATA,TI)" },
+  { code: "107", libelle: "REDACTIONS COURRIER /RAPPORT/ATTESTATION" },
+  { code: "108", libelle: "RAPPROCHEMENT BANCAIRE" },
+  { code: "109", libelle: "DECLARATIONS DES RESULTATS" },
+  { code: "1010", libelle: "TRAVAUX DE FIN DE MISSION" },
+  { code: "1012", libelle: "ETATS PREVISIONNELS" },
+  { code: "1013", libelle: "ORGANISATION OMPTABLE" },
+  { code: "15", libelle: "EXPERTISE DOSSIERS EXTERNES" },
+  { code: "150", libelle: "PRISE DE CONNAISSANCE" },
+  { code: "151", libelle: "ORGANISATION OMPTABLE" },
+  { code: "152", libelle: 'SUIVI EN COURS D"EXERCICE' },
+  { code: "153", libelle: 'TRAVAUX DE CONTROLE DE FIN D"EXERCICE' },
+  { code: "154", libelle: "TRAVAUX DE FIN DE MISSION" },
+  { code: "155", libelle: "DECLARATIONS (BIC,TVA,DAR,PRORATA,TI)" },
+  { code: "156", libelle: "ETATS PREVISIONNELS" },
+  { code: "20", libelle: "REPRESENTATION" },
+  { code: "200", libelle: "ETABLISSEMENT DES DECLARATIONS" },
+  { code: "201", libelle: "GESTION DES OPERATIONS COMPTABLES" },
+  { code: "202", libelle: "ETABLISSEMENT DE LA PAIE" },
+  { code: "203", libelle: "AUTRES ACTIVITES LIEES A LA REPRESENTATION" },
+  { code: "30", libelle: "JURIDIQUE FISCAL ET SOCIAL" },
+  { code: "300", libelle: "ABONNEMENT JURIDIQUE ET FISCAL UEMOA" },
+  { code: "3050", libelle: "REVUES JURIDIQUE ET FISCALES UEMOA" },
+  { code: "3060", libelle: "REVUES JURIDIQUE ET FISCALES HORS UEMOA" },
+  { code: "3070", libelle: "SECRETARIAT JURIDIQUE UEMOA" },
+  { code: "3080", libelle: "SECRETARIAT JURIDIQUE  HORS UEMOA" },
+  { code: "3085", libelle: "TESTS DE RECRUTEMENT" },
+  { code: "3090", libelle: "ENTRETIEN DE RECRUTEMENT" },
+  { code: "3095", libelle: "CLASSEMENT DOSSIER DE RECRUTEMENTR" },
+  { code: "40", libelle: "CAC/AUDIT" },
+  { code: "400", libelle: "PLANIFICATION DE LA MISSION " },
+  { code: "4010", libelle: "PROCEDURES DE CONTRÔLE INTERNES" },
+  { code: "4020", libelle: "CONTRÔLE DES COMPTES" },
+  { code: "4030", libelle: "REUNION DE SYNTHESE ET RAPPORTS" },
+  { code: "4040", libelle: "REVUE JURIDIQUE" },
+  { code: "4050", libelle: "SUPERVISION " },
+  { code: "4060", libelle: 'REUNION DE CONSEIL ET D"ASSEMBLEE' },
+  { code: "4070", libelle: 'PRISE D"INVENTAIRE ANNUEL -CIRCULARISATION' },
+  { code: "4080", libelle: "AUTRES MISSIONS CONNEXES" },
+  { code: "50", libelle: "AUDIT DES PROJETS" },
+  { code: "500", libelle: "PLANIFICATION DE LA MISSION " },
+  { code: "5020", libelle: "PROCEDURES DE CONTRÔLE INTERNES" },
+  { code: "5030", libelle: "CONTRÔLE DES DEPENSES/COMPTES" },
+  { code: "5040", libelle: "SUPERVISION " },
+  { code: "5050", libelle: "REUNION DE RESTITUTION ET RAPPORTS" },
+  { code: "60", libelle: 'SYSTÈME D"INFORMATION' },
+  { code: "600", libelle: "ASSISTANCE A LA MISE EN PLACE DU SI" },
+  { code: "6010", libelle: "ELABORATION DE MPAFC" },
+  { code: "6020", libelle: "AUTRES TRAVAUX RELATIFS AUX SI" },
+  { code: "90", libelle: "NON FACTURABLE" },
+  { code: "900", libelle: "ABSENCE - MALADIE" },
+  { code: "9010", libelle: "REUNION/FORMATION INTERNE" },
+  { code: "9020", libelle: 'ABSENCE- CONGES D"EXAMEN' },
+  { code: "9030", libelle: "ABSENCE- TEMPS NON PAYE" },
+  { code: "9040", libelle: "CLASSEMENT DES DOCUMENTS" },
+  { code: "9050", libelle: "ABSENCE- JOUR FERIE" },
+  { code: "9060", libelle: "ABSENCE - CONGES ANNUELS" },
+  { code: "9070", libelle: "DEVELOPPEMENT /ORGANISATION PROFESSIONNELLE" },
+  { code: "9080", libelle: "ADMINISTRATION REPRESENTATION CABINET" },
+  { code: "9090", libelle: "SOUS ACTIVITE" },
+];
+
+
