@@ -18,6 +18,10 @@ contextBridge.exposeInMainWorld("api", {
       
       ipcRenderer.send("maximize");
     },
+    close: () => {
+  
+      ipcRenderer.send("close");
+    },
     save: (state) => {
       console.log(state);
       ipcRenderer.send("save", state);

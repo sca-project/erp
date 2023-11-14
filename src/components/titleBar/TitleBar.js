@@ -6,8 +6,10 @@ import {
   mdiWindowMinimize,
   mdiWindowRestore,
 } from "@mdi/js";
+import { maximize,minimize,close} from "../../api/actions";
+
 import "./titleBar.css";
-import logo from "../../logo.png";
+import logo from "../../logo-title.png";
 import { useNavigate } from "react-router-dom";
 const TitleBar = () => {
   const navigate = useNavigate()
@@ -15,30 +17,49 @@ const TitleBar = () => {
   return (
     <div className="card " id="title-bar">
       <div className="title-bar-left"  >
-        <img src={logo} alt="" width={20} onClick={()=>navigate("/")} />
-        <span className="app-name">SCA's</span>
+        <img src={logo} alt="" width={23} onClick={()=>navigate("/")} style={{borderRadius:5}} />
+        <span className="app-name">SCA</span>
       </div>
-      <div className="title-bar-center">Stratégie - Conseil - Afrique</div>
+      <div className="title-bar-center">SaaS</div>
       <div className="title-bar-right">
         <span>
           <Icon
             path={mdiWindowMinimize}
             size={0.8}
             title="Réduire"
-            onClick={() => console.log("click")}
+            onClick={() => {
+              
+              try {
+          
+                minimize()
+              } catch (error) {
+                console.log("click error",error)
+              }
+            
+            
+            }}
           />
         </span>
         <span
           onClick={() => {
             setMinMax(!minMax);
-            // maximize();
+            maximize();
           }}
         >
           <Icon
             path={minMax ? mdiWindowMaximize : mdiWindowRestore}
             size={0.8}
             title="Agrandir/Restaurer"
-            onClick={() => console.log("click")}
+            onClick={() => {
+              
+              try {
+                
+              } catch (error) {
+                console.log("click error",error)
+              }
+            
+            
+            }}
           />
         </span>
         <span>
@@ -46,7 +67,16 @@ const TitleBar = () => {
             path={mdiWindowClose}
             size={0.8}
             title="Fermer"
-            onClick={() => console.log("click")}
+            onClick={() => {
+              
+              try {
+                close()
+              } catch (error) {
+                console.log("click error",error)
+              }
+            
+            
+            }}
           />
         </span>
       </div>

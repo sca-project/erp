@@ -20,7 +20,9 @@
 .app-name {
     margin-left: 5px;
     font-weight: 600;
-    color: var(--vert);
+  /* text-decoration: line-through; */
+
+    
 }
 
 .title-bar-left {

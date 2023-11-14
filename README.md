@@ -1,13 +1,15 @@
 
 
 # Getting Started with Create React App
-echo "# migas" >> README.md
 git init
+echo "# erp" >> README.md
+
 git add README.md
 git commit -m "first commit"
 git branch -M main
-git remote add origin https://github.com/sca-project/migas.git
+git remote add origin https://github.com/sca-project/erp.git
 git push -u origin main
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

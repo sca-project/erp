@@ -29,12 +29,16 @@
 }
 
 .margin_side_bar{
-    margin-left: 205px;
+    /* margin-left: 205px; */
 }
 .outlet {
     /* margin-left: 5px; */
   
-   
+   position: sticky;
+   height: 72vh;
+   overflow: auto;
+   /* overflow-y: hidden;
+   overflow-x: hidden; */
 }
 
 .d_none{

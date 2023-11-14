@@ -1,14 +1,14 @@
 {
-  "name": "migas",
+  "name": "sca",
   "homepage": "./",
-  "version": "0.1.0",
-  "description": "Projet Dev MIGAS ",
+  "version": "0.1.3",
+  "description": "Projet Dev SCA",
   "author": "Mamane",
   "main": "public/electron.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/sca-project/migas.git"
+    "url": "https://github.com/sca-project/erp.git"
   },
   "dependencies": {
     "@mdi/js": "^7.2.96",

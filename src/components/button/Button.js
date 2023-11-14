@@ -1,10 +1,9 @@
 import React from 'react'
 import './button.css'
 import Icon from '@mdi/react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Button = ({listCard}) => {
-    const navigate = useNavigate()
   return (
     
 
@@ -12,15 +11,16 @@ const Button = ({listCard}) => {
        
       <div className="cardLink ">
         {listCard.map((item, index) => (
-          <div
+          <NavLink
             className=" card cardLink-item "
             key={index}
-            onClick={() => navigate(item.route)}
+            to={item.route}
+            
           >
             <Icon path={item.icon} size={1} color={"var(--vert)"} />
 
             <div>{item.link}</div>
-          </div>
+          </NavLink>
         ))}
       </div>
     </div>

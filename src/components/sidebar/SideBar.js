@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { data as sidebarItems } from "../header/menu";
+import { dataSideBAr as sidebarItems } from "../header/menu";
 
 import "./sideBar.css";
 import { NavLink, useLocation } from "react-router-dom";

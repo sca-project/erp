@@ -1,34 +1,41 @@
 import React, { useEffect, useState } from "react";
-import Title from "../../components/title/Title";
-import ClientForm from "./ClientForm";
-import { initClient, init } from "./init";
+
+import { client as init } from "../ini/client";
 import { useLocation, useParams } from "react-router-dom";
+import Formulaire from "./Formulaire";
 const Client = () => {
-  const params = useParams()
-  const location = useLocation()
+  const params = useParams();
+  const location = useLocation();
 
   const [client, setClient] = useState(init);
-
   useEffect(() => {
- 
-   if (location.state) {
-   
- setClient(location.state)
-   }
-    
-  }, [location.state, params])
-  
-const renderTitle = params.updateId? "Client (Mis à jour)":params.destroyId? "Client (Suppression)" :"Client (Nouveau)" 
+    if (location.state) {
+      setClient(location.state);
+    }
+  }, [location.state, params]);
+
+  const renderLegend = params.updateId
+    ? " Mis à jour"
+    : params.destroyId
+    ? " Suppression"
+    : " Nouveau";
 
   return (
-    <div className="client">
-      <div className="card">
-        <Title title={renderTitle} />
-      </div>
-      <div className="card card-top">
-        <ClientForm client={client} setClient={setClient} />
-      </div>
-    </div>
+    <fieldset className="card col-12 ">
+      <legend
+        className="card legend"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-end",
+          textAlign: "left",
+        }}
+      >
+        {renderLegend}
+      </legend>
+
+      <Formulaire client={client} setClient={setClient} />
+    </fieldset>
   );
 };
 

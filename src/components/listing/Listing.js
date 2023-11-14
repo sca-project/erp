@@ -1,24 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import Icon from "@mdi/react";
-import { mdiChevronDown, mdiPlusBox } from "@mdi/js";
+import { mdiChevronDown } from "@mdi/js";
 import "./listing.css";
 
-const clickOutsideRef = (content_ref, toggle_ref) => {
-  // console.log(content_ref.current);
-  document.addEventListener("mousedown", (e) => {
-    //user click toggle
-    if (toggle_ref.current && toggle_ref.current.contains(e.target)) {
-      content_ref.current && content_ref.current.classList.toggle("actif");
-    } else {
-      //user click outside and content
-      if (content_ref.current && !content_ref.current.contains(e.target)) {
-        // document.getElementsByClassName('footer-item')[0].classList.remove('actif')
-        content_ref.current.classList.remove("actif");
-        // document.getElementsByClassName('layout')[0].classList.remove("sidebar-width")
-      }
-    }
-  });
-};
 
 const Listing = (props) => {
 

@@ -33,7 +33,7 @@ function createWindow() {
     width: 1200,
     height: 600,
     show: false,
-    // titleBarStyle:"hidden",
+    titleBarStyle:"hidden",
     icon: path.join(__dirname, "logo.png"),
     webPreferences: {
       nodeIntegration: true,
@@ -139,6 +139,9 @@ ipcMain.on("minimize", (e) => {
 ipcMain.on("maximize", (e) => {
   // win.restore()
   win.isMaximized() ? win.restore() : win.maximize();
+});
+ipcMain.on("close", (e) => {
+  app.quit();
 });
 ipcMain.on("save", (e, arg) => {
   let filePath = "./src/data/data_.json";

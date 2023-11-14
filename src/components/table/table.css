@@ -23,7 +23,7 @@ table{
 
 tbody > tr:hover{
     background-color: var(--nuance);
-    color: var(--gris);
+    color: #fff;
     cursor: pointer;
    
 }

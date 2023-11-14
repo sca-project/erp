@@ -10,7 +10,7 @@
     box-shadow: var(--box-shadow-light);
     margin-right: 5px;
     background-color: var(--main-bg);
-    z-index: 98;
+    /* z-index: 98; */
 }
 
 .side_bar_item {

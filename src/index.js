@@ -8,11 +8,13 @@ import store from "./redux/store";
 import "./css/grid.css";
 import "./css/index.css";
 import SnackBar from "./components/snackbar/SnackBar";
+import { addCities } from "./firebase";
 
 
 // console.log(app);
-document.title = "SCA's";
+document.title = "SCA";
 console.log(store.getState());
+addCities()
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>

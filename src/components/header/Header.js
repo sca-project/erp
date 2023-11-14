@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { mdiAccountPlusOutline, mdiCashCheck, mdiCashClock, mdiCashFast, mdiCashMinus, mdiCashMultiple, mdiEye, mdiSquareEditOutline, mdiTrashCanOutline } from "@mdi/js";
 import "./header.css";
 import Button from "../button/Button";
-import { data, buttonsClient, buttonsDashBoard } from "./menu";
+import { dataSideBAr as data, buttonsTiers, buttonsDashBoard, buttonsDonnees, buttonsMissions } from "./menu";
 
 
 const Header = () => {
-  const [onglet, setOnglet] = useState(<Button listCard={buttonsClient} />);
+  const [onglet, setOnglet] = useState(<Button listCard={buttonsTiers} />);
 
   const location = useLocation();
-  console.log("location", location);
+  // console.log("location", location);
   useEffect(() => {
     switch (location.pathname) {
       case "/":
 
-      return setOnglet(<Button listCard={buttonsDashBoard} />);
+        return setOnglet(<Button listCard={buttonsDashBoard} />);
       case "/missions":
-  
-      return setOnglet(<Button listCard={buttonsClient} />);
-      case "/collaborateurs":
-        
-        return setOnglet(<Button listCard={buttonsClient} />);
-      case "/clients":
-        
-        return setOnglet(<Button listCard={buttonsClient} />);
 
+        return setOnglet(<Button listCard={buttonsMissions} />);
+      
+      case "/tiers":
 
+        return setOnglet(<Button listCard={buttonsTiers} />);
+    
+    
+      case "/donnees":
+
+        return setOnglet(<Button listCard={buttonsDonnees} />);
+     
+   
       default:
         break;
     }

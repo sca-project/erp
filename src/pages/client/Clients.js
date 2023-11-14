@@ -1,69 +1,35 @@
 import React from "react";
-import Title from "../../components/title/Title";
-import Button from "../../components/button/Button";
 import Table from "../../components/table/Table";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Icon from "@mdi/react";
-import { mdiAccountPlusOutline, mdiCashCheck, mdiCashClock, mdiCashFast, mdiCashMinus, mdiCashMultiple, mdiEye, mdiSquareEditOutline, mdiTrashCanOutline } from "@mdi/js";
-const listCard = [
-  {
-    icon: mdiAccountPlusOutline,
-    link: "Nouveau",
-    route: "/clients/Client",
-  },
-  {
-    icon: mdiCashMultiple,
-    link: "Regléments",
-    route: "/clients/paiements",
-  },
-  {
-    icon: mdiCashClock,
-    link: "Echéanciers",
-    route: "/clients/paiements",
-  },
-  {
-    icon: mdiCashMinus,
-    link: "Ecarts",
-    route: "/clients/paiements",
-  },
-  {
-    icon: mdiCashFast,
-    link: "Relances",
-    route: "/clients/paiements",
-  },
+import { mdiEye, mdiSquareEditOutline, mdiTrashCanOutline } from "@mdi/js";
 
-  {
-    icon: mdiCashCheck,
-    link: "Transferts",
-    route: "/clients/paiements",
-  },
-];
 const Clients = () => {
   const clients = useSelector(state=>state.clients)
   const navigate = useNavigate();
   let headData = [
-    "Compte",
-    "NIF",
+    
+    "Nif",
     "Nom",
     "Tél",
-    "BP",
+    "Bp",
     "Adresse",
     "Email",
+    "Catégorie",
     "Action",
   ];
   const renderHead = (item, index) => <th key={index}>{item}</th>;
 
   const renderBody = (item, index) => (
     <tr key={index}>
-      <td>{`${item.compte}/${index + 1}`}</td>
       <td>{item.nif}</td>
-
       <td>{item.nom}</td>
       <td>{item.tel}</td>
       <td>{item.bp}</td>
       <td>{item.adresse}</td>
       <td>{item.email}</td>
+      <td>{item.type}</td>
 
       <td
         style={{
@@ -89,7 +55,7 @@ const Clients = () => {
           path={mdiSquareEditOutline}
           size={0.6}
           title="Editer"
-          onClick={() => navigate(`client/${item.nif}`, { state: item })}
+          onClick={() => navigate(`/tiers/client/${item.uuid}`, { state: item })}
         />{" "}
         /
         
@@ -98,7 +64,7 @@ const Clients = () => {
           size={0.6}
           title="Supprimer"
           onClick={() =>
-            navigate(`client/${item.nif}/destroy`, { state: item })
+            navigate(`/tiers/client/${item.uuid}/destroy`, { state: item })
           }
         />
       </td>
@@ -122,7 +88,7 @@ const Clients = () => {
               size={0.8}
               color={"var(--main-color)"}
             /> */}
-          <span className="i-legend">Repertoire</span>{" "}
+          <span className="i-legend">Annuaire</span>{" "}
         </legend>
         <div className="pr-row"></div>
         <Table

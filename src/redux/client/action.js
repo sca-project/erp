@@ -9,17 +9,17 @@ export const addClient = (client) => {
   };
 };
 
-export const deleteClient = (nif) => {
+export const deleteClient = (client) => {
 
   return {
     type: DELETE_CLIENT,
-    payload: nif,
+    payload: client,
   };
 };
 
-export const updateClient = (updateClient) => {
+export const updateClient = (client) => {
   return {
     type: UPDATE_CLIENT,
-    payload: updateClient,
+    payload: client,
   };
 };
