@@ -1,7 +1,7 @@
 {
   "name": "sca",
   "homepage": "./",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Projet Dev SCA",
   "author": "Mamane",
   "main": "public/electron.js",

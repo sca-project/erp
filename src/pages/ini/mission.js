@@ -1,11 +1,12 @@
 import { client } from "./client";
 import { operation } from "./operation";
 import { collaborateur } from "./collaborateur";
+import moment from "moment/moment";
 export const mission = {
   numero:"",
-  creation:"",
-  debut: "",
-  fin: "",
+  creation:moment().format("YYYY-MM-DD"),
+  debut:moment().format("YYYY-MM-DD"),
+  fin: moment().add(7,"d").format("YYYY-MM-DD"),
   client,
   lieu:"",
   equipe: [collaborateur],

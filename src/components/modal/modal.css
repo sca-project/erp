@@ -16,7 +16,7 @@
     padding: 0;
 }
   .modalContainer {
-    /* flex: 0 1 70%; */
+    flex: 0 1 70%;
     width:auto;
     box-shadow: var(--box-shadow);
     display: flex;
@@ -30,7 +30,7 @@
     /* width: max-content; */
     /* flex-direction: column; */
 /* justify-content: center; */
-    background-color: var(--main-color);
+    background-color: var(--vert);
     padding: 5px 10px 10px 10px;
     color: var(--txt-white);
     border-radius: var(--border-radius);
@@ -87,7 +87,7 @@
 
   .modalFooter .modalBtn {
     font-size: 0.8rem;
-    background: var(--main-color);
+    background: var(--vert);
     padding: 5px 5px;
     width: 90px;
     color: var(--txt-white);
@@ -101,7 +101,7 @@
   
   .modalBtn:hover {
     background: var(--txt-white);
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
+    color: var(--vert);
+    border: 1px solid var(--vert);
   }
   /* END MODAL */

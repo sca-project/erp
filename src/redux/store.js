@@ -8,6 +8,7 @@ import utilisateurReducer from "./utilisateur/reducer";
 import categorieReducer from "./categorie/reducer";
 import tacheReducer from "./tache/reducer";
 import operationReducer from "./operation/reducer";
+import missionReducer from "./mission/reducer";
 
 
 const rootReducer = combineReducers({
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
     categories:categorieReducer,
     taches:tacheReducer,
     operations:operationReducer,
+    missions:missionReducer,
     
   });
   const store = createStore(

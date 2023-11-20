@@ -16,6 +16,7 @@ import Tache from "../pages/tache/Tache";
 import Taches from "../pages/tache/Taches";
 import Operations from "../pages/operation/Operations";
 import Operation from "../pages/operation/Operation";
+import Mission from "../pages/mission/Mission";
 
 export const router = createHashRouter([
   {
@@ -36,6 +37,23 @@ export const router = createHashRouter([
       {
         path: "missions",
         element: <Missions />,
+      },
+      // Planning 
+      {
+        path: "missions/plannings",
+        element: <Missions />,
+      },
+      {
+        path: "missions/plannings/new",
+        element: <Mission />,
+      },
+      {
+        path: "missions/plannings/:updateId",
+        element: <Mission />,
+      },
+      {
+        path: "missions/plannings/:destroyId/destroy",
+        element: <Mission />,
       },
        // Oerations
        {

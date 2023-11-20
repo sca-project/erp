@@ -61,12 +61,12 @@ export const buttonsMissions = [
   {
     icon: mdiFileChartCheckOutline,
     link: "Planning",
-    route: "/missions",
+    route: "/missions/plannings",
   },
   {
     icon: mdiFileChartCheckOutline,
     link: "Timings",
-    route: "/missions/timings",
+    route: "/missions/plannings",
   },
   {
     icon: mdiFileChartCheckOutline,

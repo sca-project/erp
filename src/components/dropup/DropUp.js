@@ -5,8 +5,7 @@ import Icon from "@mdi/react";
 import { mdiPlusBox } from "@mdi/js";
 const list = [
   "/",
-  
- 
+
   "/donnees",
   "/tiers",
   "/missions",

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { collaborateur as init } from "../ini/collaborateur";
+import { mission as init } from "../ini/mission";
 import { useLocation, useParams } from "react-router-dom";
 import Formulaire from "./Formulaire";
 const Mission = () => {
@@ -21,7 +21,7 @@ const Mission = () => {
     : " Nouveau";
 
   return (
-    <fieldset className="card col-12 ">
+    <fieldset className="card  ">
       <legend
         className="card legend"
         style={{

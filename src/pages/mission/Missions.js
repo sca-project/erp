@@ -10,14 +10,14 @@ const Missions = () => {
   const navigate = useNavigate();
   let headData = [
     
-    "Initial",
-    "Matricule",
-    "Nom",
-    "Prénom",
-    "Grade",
-    "Département",
-    "Société",
-    "E-mail",
+    "Numéro",
+    "Début",
+    "Echéance",
+    "Client",
+    "Lieu",
+    "Equipe",
+    "Activités",
+    "Statut",
    
     "Action",
   ];
@@ -25,14 +25,15 @@ const Missions = () => {
 
   const renderBody = (item, index) => (
     <tr key={index}>
-      <td>{item.initial}</td>
-      <td>{item.matricule}</td>
-      <td>{item.nom}</td>
-      <td>{item.prenom}</td>
-      <td>{item.grade}</td>
-      <td>{item.departement}</td>
-      <td>{item.societe}</td>
-      <td>{item.email}</td>
+      <td>{item.numero}</td>
+      <td>{item.debut}</td>
+      <td>{item.fin}</td>
+      <td>{item.client.nom}</td>
+      <td>{item.lieu}</td>
+      <td>{item.equipe.length}</td>
+      <td>{item.activites.length}</td>
+      <td>{item.status}</td>
+     
 
 
       <td
@@ -59,7 +60,7 @@ const Missions = () => {
           path={mdiSquareEditOutline}
           size={0.6}
           title="Editer"
-          onClick={() => navigate(`/tiers/Mission/${item.uuid}`, { state: item })}
+          onClick={() => navigate(`/missions/plannings/${item.uuid}`, { state: item })}
         />{" "}
         /
         
@@ -68,7 +69,7 @@ const Missions = () => {
           size={0.6}
           title="Supprimer"
           onClick={() =>
-            navigate(`/tiers/mission/${item.uuid}/destroy`, { state: item })
+            navigate(`/missions/plannings/${item.uuid}/destroy`, { state: item })
           }
         />
       </td>
